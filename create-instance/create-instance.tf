@@ -8,6 +8,6 @@ output "sample_string"{
 }
 # echo sample_string
 
-utput "sample_string"{
+outpututput "sample_string"{
   value= " the sample string is ${sample_string}"
 }
