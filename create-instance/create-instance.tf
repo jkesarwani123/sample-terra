@@ -11,3 +11,14 @@ output "sample_string" {
 output "sample_string1" {
   value = " the sample string is ${var.sample_string}"
 }
+
+variable "sample_dict"{
+  default= {
+    number1=100
+    string1="hello"
+    boolean1=true
+  }
+}
+ output "sample_dict"{
+   value=var.sample_dict.number1
+ }
