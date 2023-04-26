@@ -25,3 +25,7 @@ variable "sample_dict"{
 output "sample_dict1"{
   value=var.sample_dict["number1"]
 }
+
+output "sample_dict"{
+  value=var.sample_dict.string1
+}
