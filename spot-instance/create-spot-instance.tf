@@ -28,7 +28,7 @@ resource "aws_spot_instance_request" "spotinstance" {
   instance_type = var.instanceTy
   spot_type = "persistent"
   block_duration_minutes = 30
-  instance_interruption_behaviour = "stop"
+  #instance_interruption_behaviour = "stop"
   vpc_security_group_ids = [ data.aws_security_group.selected.id ]
 
   tags = {
