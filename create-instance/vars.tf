@@ -19,9 +19,9 @@ variable "sample_dict"{
     boolean1=true
   }
 }
- output "sample_dict"{
-   value=var.sample_dict.number1
- }
+output "sample_dict"{
+  value=var.sample_dict.number1
+}
 output "sample_dict1"{
   value=var.sample_dict["number1"]
 }
