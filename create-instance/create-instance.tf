@@ -29,3 +29,5 @@ output "sample_dict1"{
 output "sample_dict_string"{
   value=var.sample_dict.string1
 }
+
+variable "env" {}
