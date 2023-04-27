@@ -27,7 +27,6 @@ resource "aws_spot_instance_request" "spotinstance" {
   ami           = data.aws_ami.centos.image_id
   instance_type = var.instanceTy
   spot_type = "persistent"
-  block_duration_minutes = 60
   #instance_interruption_behaviour = "stop"
   vpc_security_group_ids = [ data.aws_security_group.selected.id ]
 
