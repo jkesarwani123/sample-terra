@@ -40,7 +40,7 @@ count = 20}
 }
 }
 
-resource "null_resource" "fruits" {
+resource "null_resource" "nested_fruits" {
 for_each = var.nested_fruits
 
 provisioner "local-exec" {
