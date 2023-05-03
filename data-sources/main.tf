@@ -44,7 +44,7 @@ count = 20}
 resource "null_resource" "nested_fruits" {
 for_each = var.nested_fruits
 
-provisioner "local-exec" {
+provisioner "local-exec1" {
 command = "echo nested fruit name is ${each.key} = ${each.value["count"]} "
 }
 }
