@@ -1,5 +1,5 @@
 #use count for loop
-resource "null resource" "fruits"{
+resource "null_resource" "fruits"{
   count = length(var.fruits)
 
   provisioner "local-exec"{
