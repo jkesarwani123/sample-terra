@@ -1,7 +1,16 @@
-data "aws_security_group" "selected" {
-  name = "allow-all"
+#use count for loop
+resource "null resource" "fruits"{
+  count = length(var.fruits)
+
+  provisioner "local-exec"{
+    command = "echo fruit name is ${var.fruits[count.index]}"
+  }
 }
 
-output "security_group_id"{
-  value = data.aws_security_group.selected
+variable "fruits"{
+  default = {
+    apple=10
+    bananas=100
+    oranges=20
+  }
 }
