@@ -16,13 +16,14 @@ variable "fruits"{
 }
 
 # Use for each loop - maps
+/*
 resource "null_resource" "fruits" {
   for_each = var.fruits
 
   provisioner "local-exec" {
     command = "echo fruit name is ${each.key} = ${each.value} "
   }
-}
+}*/
 
 variable "nested_fruits"{
   default = {
@@ -44,7 +45,7 @@ resource "null_resource" "nested_fruits" {
 for_each = var.nested_fruits
 
 provisioner "local-exec" {
-command = "echo fruit name is ${each.key} = ${each.value["count"]} "
+command = "echo nested fruit name is ${each.key} = ${each.value["count"]} "
 }
 }
 
