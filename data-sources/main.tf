@@ -16,7 +16,7 @@ variable "fruits"{
 }
 
 # Use for each loop - maps
-esource "null_resource" "fruits" {
+resource "null_resource" "fruits" {
   for_each = var.fruits
 
   provisioner "local-exec" {
