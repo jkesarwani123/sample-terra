@@ -6,7 +6,7 @@
     command = "echo fruit name is ${var.fruits[count.index]}"
   }
 } */
-
+/*
 variable "fruits"{
   default = {
     apple=10
@@ -16,7 +16,7 @@ variable "fruits"{
 }
 
 # Use for each loop - maps
-/*
+
 resource "null_resource" "fruits" {
   for_each = var.fruits
 
