@@ -1,4 +1,4 @@
-variable vegetables{
+variable "vegetables"{
   default = ["carrot", "pumpkin", "onion"]
 }
 
